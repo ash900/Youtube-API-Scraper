@@ -39,4 +39,7 @@ with open(input_csv, 'r') as input_file, open(output_csv, 'w', newline='') as ou
         # Write the scores to the output CSV file
         row['toxicity'] = toxicity_score
         row['severe_toxicity'] = severe_toxicity_score
+        row['identity_attack'] = identity_attack_score
+        row['insult'] = insult_score
+        row['threat'] = threat_score
         writer.writerow(row)
